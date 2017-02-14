@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:gravity="right"
+              android:paddingRight="@dimen/layout_15dp"
+              android:paddingLeft="@dimen/layout_15dp"
+              tools:context="com.hskj.damnicomniplusvic.sturxdemo.fragment.FourFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <include layout="@layout/tip_bt"/>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe5"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_150dp">
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/text5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <android.support.v7.widget.AppCompatButton
+    android:id="@+id/loaddata5"
+    android:layout_width="match_parent"
+    android:text="@string/request_data"
+    android:layout_height="@dimen/layout_50dp"/>
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/destory5"
+        android:layout_width="match_parent"
+        android:text="@string/invalidate_token"
+        android:layout_height="@dimen/layout_50dp"/>
+
+</LinearLayout>

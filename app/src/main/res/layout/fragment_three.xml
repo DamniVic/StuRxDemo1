@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+              android:orientation="vertical"
+             tools:context="com.hskj.damnicomniplusvic.sturxdemo.fragment.ThreeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <android.support.v7.widget.AppCompatEditText
+            android:layout_width="100dp"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:layout_height="@dimen/layout_50dp"
+            android:id="@+id/appCompatEditText"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:layout_width="@dimen/layout_70dp"
+            android:layout_height="@dimen/layout_50dp"
+            android:text="@string/load"
+            android:id="@+id/loaddata3"
+            android:clickable="true"
+            android:onClick="loaddata"/>
+        <include layout="@layout/tip_bt"/>
+    </LinearLayout>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycle3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+              android:orientation="vertical"
+             tools:context="com.hskj.damnicomniplusvic.sturxdemo.fragment.OneFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <RadioGroup
+            android:layout_width="@dimen/layout_0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <android.support.v7.widget.AppCompatRadioButton
+                android:id="@+id/one_radio_one"
+                android:layout_width="@dimen/layout_0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/radio_one"/>
+            <android.support.v7.widget.AppCompatRadioButton
+                android:id="@+id/one_radio_two"
+                android:layout_width="@dimen/layout_0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/radio_two"/>
+            <android.support.v7.widget.AppCompatRadioButton
+                android:id="@+id/one_radio_three"
+                android:layout_width="@dimen/layout_0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/radio_three"/>
+            <android.support.v7.widget.AppCompatRadioButton
+                android:id="@+id/one_radio_four"
+                android:layout_width="@dimen/layout_0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/radio_four"/>
+        </RadioGroup>
+        <include layout="@layout/tip_bt"/>
+
+    </LinearLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recycle1"/>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

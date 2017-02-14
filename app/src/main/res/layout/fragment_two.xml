@@ -1,0 +1,45 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+              android:orientation="vertical"
+             tools:context="com.hskj.damnicomniplusvic.sturxdemo.fragment.TwoFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <TextView
+            android:id="@+id/page"
+            android:layout_width="@dimen/layout_0dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:layout_height="@dimen/layout_50dp"/>
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/prepage"
+            android:text="@string/previous_page"
+            android:enabled="false"
+            android:tag="pre"
+            android:layout_width="@dimen/layout_70dp"
+            android:layout_height="@dimen/layout_50dp"/>
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/nextpage"
+            android:text="@string/next_page"
+            android:tag="next"
+            android:layout_width="@dimen/layout_70dp"
+            android:layout_height="@dimen/layout_50dp"/>
+        <include layout="@layout/tip_bt"/>
+    </LinearLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycle2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>
