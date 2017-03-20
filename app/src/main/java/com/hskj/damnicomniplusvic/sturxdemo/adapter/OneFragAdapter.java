@@ -1,5 +1,6 @@
 package com.hskj.damnicomniplusvic.sturxdemo.adapter;
 
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.hskj.damnicomniplusvic.sturxdemo.R;
+import com.hskj.damnicomniplusvic.sturxdemo.activity.ImageDetailActivity;
 import com.hskj.damnicomniplusvic.sturxdemo.bean.ImageTextBean;
 
 import java.util.List;
@@ -29,11 +31,19 @@ public class OneFragAdapter extends RecyclerView.Adapter {
     }
 
     @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(final RecyclerView.ViewHolder holder, int position) {
         OneViewHolder oneViewHolder= (OneViewHolder) holder;
-        ImageTextBean bean=mImageTextBeanList.get(position);
+        final ImageTextBean bean=mImageTextBeanList.get(position);
         Glide.with(holder.itemView.getContext()).load(bean.image_url).into(oneViewHolder.mImageView);
         oneViewHolder.mTextView.setText(bean.description);
+        oneViewHolder.mImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(holder.itemView.getContext(), ImageDetailActivity.class);
+                intent.putExtra("imageurl",bean.image_url);
+                holder.itemView.getContext().startActivity(intent);
+            }
+        });
     }
 
     @Override
